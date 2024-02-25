@@ -56,8 +56,6 @@ const HomeTemplate = () => {
 
   return (
     <div>
-      {isLoading && <SplashScreen finishLoading={() => setIsLoading(false)} />}
-
       <div className="flex min-h-screen flex-col items-center p-8 lg:p-24">
         <motion.div
           className="z-10 w-full items-center justify-between text-sm lg:flex flex-col"

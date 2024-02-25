@@ -27,13 +27,9 @@ export default function RootLayout({
             className="hidden lg:block absolute inset-0 -z-10 opacity-30"
             quantity={200}
           />
-          <div className="max-h-screen">
+          <div className='flex flex-col min-h-screen'>
             <Nav />
-            <main
-              className="customMain overflow-y-scroll"
-            >
-              {children}
-            </main>
+            <main className="flex-grow">{children}</main>
             <Footer />
           </div>
         </Providers>

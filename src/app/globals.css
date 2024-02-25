@@ -8,24 +8,23 @@
   }
 }
 
+/* 
 .customMain {
-  height: calc(100vh - 180px); /* Default height for mobile */
+  height: calc(100vh - 180px); 
 }
 
 @media (min-width: 425px) {
-  /* Adjust for large mobile */
   .customMain {
     height: calc(100vh - 160px);
   }
 }
 
 @media (min-width: 1024px) {
-  /* Adjust for desktop */
   .customMain {
     height: calc(100vh - 154px); 
   }
 }
-
+*/
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }

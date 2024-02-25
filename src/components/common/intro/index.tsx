@@ -8,7 +8,7 @@ const Intro = () => {
         that includes C#, WPF, SQL, HTML, and CSS. Committed to developing
         robust and reliable systems, utilising extensive experience to meet and
         exceed project objectives. In addition to professional accomplishments,
-        I've independently developed and released full-stack e-commerce and AI
+        I&apos;ve independently developed and released full-stack e-commerce and AI
         tools, using Next.js, Tailwind CSS, and Node.js. With a keen focus on
         intuitive UI/UX design and ensuring a smooth user experience, these
         projects reflect my dedication to mastering new technologies and my

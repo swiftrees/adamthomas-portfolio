@@ -4,12 +4,12 @@ const Skills = () => {
   const skills = [
     {
       url: '',
-      logo: '',
+      logo: '/Logo_C_sharp.svg.png',
       name: 'C#',
     },
     {
       url: '',
-      logo: '',
+      logo: '/wpf_logo.jpeg',
       name: 'WPF',
     },
     {

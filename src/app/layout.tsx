@@ -29,7 +29,7 @@ export default function RootLayout({
           />
           <div className='flex flex-col min-h-screen'>
             <Nav />
-            <main className="flex-grow">{children}</main>
+            <main className="flex-grow mb-20">{children}</main>
             <Footer />
           </div>
         </Providers>

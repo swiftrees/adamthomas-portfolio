@@ -41,7 +41,7 @@ export default function MatrixParticles({
   }, []);
 
   useEffect(() => {
-    if (window.innerWidth < 1024) {
+    if (window.innerWidth > 1024) {
       onMouseMove();
     }
   }, [mousePosition.x, mousePosition.y]);

@@ -41,10 +41,7 @@ export default function MatrixParticles({
   }, []);
 
   useEffect(() => {
-    const isTouchDevice =
-      'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
-    if (!isTouchDevice) {
+    if (window.innerWidth < 1024) {
       onMouseMove();
     }
   }, [mousePosition.x, mousePosition.y]);

@@ -2,18 +2,21 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import LogoIcon from '@/icons/logo';
 import LinkedIn from '@/icons/linkedin';
 import { FooterCopyright } from '../footer-copyright';
+import GitHub from '@/icons/linkedin copy';
 
-const INSTAGRAM_LINK =
-  process.env.NEXT_PUBLIC_NSTAGRAM_LINK || 'https://instagram.com/swiftrees_';
-const ECOLOGI_LINK = 'https://ecologi.com/swiftrees';
 const Footer = () => {
   const iconVariants = {
     hover: {
       scale: 1.1,
       color: '#0a66c2',
+    },
+  };
+  const gitIconVariants = {
+    hover: {
+      scale: 1.1,
+      color: '#000',
     },
   };
   return (
@@ -48,7 +51,15 @@ const Footer = () => {
               </Link>
             </p>
             <p className="text-xs lg:text-sm ">
-              Deployed with Git, Hosted with{' '}
+              Deployed with{' '}
+              <Link
+                href="https://github.com/"
+                target="_blank"
+                className="hover:underline"
+              >
+                Git
+              </Link>
+              , hosted with{' '}
               <Link
                 href="https://vercel.com/"
                 target="_blank"
@@ -59,22 +70,33 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="text-xs lg:text-sm ">
+          <div className="text-xs lg:text-sm mt-2">
             <FooterCopyright />
           </div>
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex flex-col md:flex-row justify-between text-gray-800 dark:text-white">
           <motion.a
-            href={INSTAGRAM_LINK}
+            href={'https://www.linkedin.com/in/adam-thomas-3518852b2/'}
             target="_blank"
             rel="noreferrer"
-            aria-label="HEYi Instagram"
+            aria-label="Adam Thomas LinkedIn Profile"
             whileHover="hover"
             variants={iconVariants}
             className="hover:underline"
           >
-            <LinkedIn size={40} />
+            <LinkedIn className="w-8 h-8 lg:w-12 h-12" />
+          </motion.a>
+          <motion.a
+            href={'https://github.com/swiftrees/adamthomas-portfolio'}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Adam R Thomas Portfolio Git"
+            whileHover="hover"
+            variants={gitIconVariants}
+            className="hover:underline"
+          >
+            <GitHub className="w-8 h-8 lg:w-12 h-12" />
           </motion.a>
         </div>
       </div>

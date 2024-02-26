@@ -15,7 +15,7 @@ export default function WorkExperience() {
   ];
 
   return (
-    <section className="mt-16 flex-grow bg-white border border-emerald-600 dark:bg-gray-700 shadow-lg p-4 lg:p-8 rounded-xl">
+    <section className="mt-16 flex-grow bg-white border border-emerald-600 dark:bg-gray-700 shadow-lg p-4 lg:p-8 pb-12 rounded-xl">
       <div className="mb-16">
         <h2 className="font-semibold text-4xl mb-4">Experience</h2>
       </div>

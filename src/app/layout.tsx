@@ -24,12 +24,12 @@ export default function RootLayout({
       <body className={`${inter.className} bg-gray-100 dark:bg-gray-900`}>
         <Providers>
           <MatrixParticles
-            className="block absolute inset-0 -z-10 opacity-30"
+            className="hidden md:block absolute inset-0 -z-10 opacity-30"
             quantity={200}
           />
           <div className='flex flex-col min-h-screen'>
             <Nav />
-            <main className="flex-grow mb-20">{children}</main>
+            <main className="flex-grow mb-28 lg:mb-16">{children}</main>
             <Footer />
           </div>
         </Providers>

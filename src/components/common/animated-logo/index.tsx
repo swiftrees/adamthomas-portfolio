@@ -18,13 +18,13 @@ const AnimatedLogo = () => {
       <motion.div className="flex gap-x-2 lg:gap-x-8" initial="initial" animate="animate">
         <motion.h1
           variants={AdamAnimation}
-          className="z-10 text-2xl duration-1000 cursor-default sm:text-6xl lg:text-9xl whitespace-nowrap bg-clip-text font-bold"
+          className="z-10 text-3xl duration-1000 cursor-default sm:text-6xl lg:text-9xl whitespace-nowrap bg-clip-text font-bold"
         >
           Adam
         </motion.h1>
         <motion.h1
           variants={ThomasAnimation}
-          className="z-10 text-2xl duration-1000 cursor-default sm:text-6xl lg:text-9xl whitespace-nowrap bg-clip-text font-bold"
+          className="z-10 text-3xl duration-1000 cursor-default sm:text-6xl lg:text-9xl whitespace-nowrap bg-clip-text font-bold"
         >
           Thomas
         </motion.h1>

@@ -12,6 +12,14 @@ const ProjectsTemplate = () => {
       url: 'https://heyi.app',
     },
     {
+      title: 'Canvart - Work in progress',
+      description:
+        'Transform your vision into gallery quality printable artwork',
+      tools: 'Built using Next JS, Tailwind CSS, Medusa JS, OpenAI, Replicate',
+      imageUrl: './projects/canvart.JPG',
+      url: 'https://canvart.ai',
+    },
+    {
       title: 'AI Background Removal Tool',
       description: 'Remove the background from any image',
       tools: 'Built using Next JS, Tailwind CSS, and Replicate',
@@ -33,7 +41,7 @@ const ProjectsTemplate = () => {
       url: 'https://heyi.app/tools/ai-image-restorer',
     },
     {
-      title: 'The Product Poster',
+      title: 'The Product Poster - Work in progress',
       description: 'Post products from WooCommerce to Instagram',
       tools: 'Built using React, MUI, OpenAI, Replicate',
       imageUrl: './projects/the-product-poster.jpg',
@@ -88,8 +96,12 @@ const ProjectsTemplate = () => {
                 <h2 className="text-lg font-bold mb-2 text-gray-900 dark:text-gray-100">
                   {project.title}
                 </h2>
-                <p className="text-gray-700 dark:text-gray-200 mb-1">{project.description}</p>
-                <p className="text-sm text-gray-700 dark:text-gray-200 ">{project.tools}</p>
+                <p className="text-gray-700 dark:text-gray-200 mb-1">
+                  {project.description}
+                </p>
+                <p className="text-sm text-gray-700 dark:text-gray-200 ">
+                  {project.tools}
+                </p>
               </motion.div>
             </Link>
           ))}

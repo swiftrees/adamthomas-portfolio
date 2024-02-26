@@ -78,18 +78,18 @@ const ProjectsTemplate = () => {
                 variants={cardVariants}
                 whileHover={{ scale: 1.025 }}
                 transition={{ type: 'spring', stiffness: 200, damping: 10 }}
-                className="bg-white shadow-lg p-4 rounded-md cursor-pointer"
+                className="bg-white shadow-lg p-4 lg:p-8 rounded-xl cursor-pointer border border-emerald-600 dark:bg-gray-700"
               >
                 <img
                   className="mb-4"
                   src={project.imageUrl}
                   alt={`Project ${project.title}`}
                 />
-                <h2 className="text-lg font-bold mb-2 text-gray-900">
+                <h2 className="text-lg font-bold mb-2 text-gray-900 dark:text-gray-100">
                   {project.title}
                 </h2>
-                <p className="text-gray-700 mb-1">{project.description}</p>
-                <p className="text-sm text-gray-700">{project.tools}</p>
+                <p className="text-gray-700 dark:text-gray-200 mb-1">{project.description}</p>
+                <p className="text-sm text-gray-700 dark:text-gray-200 ">{project.tools}</p>
               </motion.div>
             </Link>
           ))}

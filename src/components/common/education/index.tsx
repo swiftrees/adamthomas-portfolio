@@ -1,30 +1,30 @@
 import Image from 'next/image';
 
-export default function WorkExperience() {
+export default function Education() {
   const jobs = [
     {
-      name: 'Cegedim Healthcare Solutions',
-      logo: '/cegedim-logo.png',
-      url: 'https://www.cegedim-healthcare.co.uk/',
-      title: 'Software Developer',
-      startDate: 'June 2017',
-      endDate: 'Present',
+      name: 'University of South Wales',
+      logo: '/usw_logo.jpg',
+      url: 'https://www.southwales.ac.uk/',
+      title: 'BSc (Hons) Computer Science 2:1',
+      startDate: '2013',
+      endDate: '2017',
       description:
-        'Sole developer responsible for the updating of desktop clinical tools software from Delphi to C# and WPF, improving functionality and performance.',
+        'Studied subjects including AI, OOP, and real-time rendering. Developed a Unity 3D piano learning game, showcasing my skills in game development, C#, and problem-solving.',
     },
   ];
 
   return (
-    <section className="mt-16 flex-grow bg-white border border-emerald-600 dark:bg-gray-700 shadow-lg p-4 lg:p-8 rounded-xl">
+    <section className="mt-16 flex-grow bg-white dark:bg-gray-700 border border-emerald-600 shadow-lg p-4 lg:p-8 rounded-xl">
       <div className="mb-16">
-        <h2 className="font-semibold text-4xl mb-4">Experience</h2>
+        <h2 className="font-semibold text-4xl mb-4">Education</h2>
       </div>
 
       <div className="flex flex-col gap-y-12">
         {jobs.map((data, index) => (
           <div
             key={index}
-            className="flex items-start lg:gap-x-6 gap-x-4 max-w-2xl relative before:absolute before:bottom-0 before:top-[4.5rem] before:left-7 before:w-[1px] before:h-[calc(100%-50px)] before:bg-emerald-800"
+            className="flex items-start lg:gap-x-6 gap-x-4 max-w-2xl relative before:absolute before:bottom-0 before:top-[4.5rem] before:left-7 before:w-[1px] before:h-[calc(100%-50px)] before:bg-zinc-800"
           >
             <a
               href={data.url}

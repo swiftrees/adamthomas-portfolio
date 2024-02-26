@@ -21,10 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-gray-100 dark:bg-gray-900`}>
         <Providers>
           <MatrixParticles
-            className="hidden lg:block absolute inset-0 -z-10 opacity-30"
+            className="block absolute inset-0 -z-10 opacity-30"
             quantity={200}
           />
           <div className='flex flex-col min-h-screen'>

@@ -7,6 +7,7 @@ import WorkExperience from '@/components/common/work-experience';
 import Skills from '@/components/common/skills';
 import { useState, useEffect } from 'react';
 import SplashScreen from '@/components/common/splash-screen';
+import Education from '@/components/common/education';
 
 const HomeTemplate = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,7 +22,7 @@ const HomeTemplate = () => {
           initial: { y: '20vh', scale: 1 },
           animate: {
             y: 0,
-            scale: 1, 
+            scale: 1,
             transition: {
               duration: 1,
               delay: 2.2,
@@ -36,7 +37,7 @@ const HomeTemplate = () => {
           initial: { y: '50vh', scale: 1 },
           animate: {
             y: 0,
-            scale: 0.5, 
+            scale: 0.5,
             transition: {
               duration: 1,
               delay: 2.2,
@@ -64,13 +65,16 @@ const HomeTemplate = () => {
           animate="animate"
         >
           <AnimatedLogo />
-          <AnimatedTextCharacter text={'Full Stack Web Developer'} />
+          <AnimatedTextCharacter text={'Full Stack Developer'} />
         </motion.div>
-        <div className="max-w-6xl mt-12 lg:mt-4">
+        <div className="max-w-6xl mt-12">
           <Intro />
-          <div className="flex flex-col lg:flex-row justify-between">
+          <div className="flex flex-col lg:flex-row justify-between gap-x-16">
             <Skills />
-            <WorkExperience />
+            <div className="flex flex-col ">
+              <WorkExperience />
+              <Education />
+            </div>
           </div>
         </div>
       </div>

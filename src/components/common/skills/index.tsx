@@ -14,38 +14,43 @@ const Skills = () => {
     },
     {
       url: '',
-      logo: '',
+      logo: '/html5_logo.png',
       name: 'HTML',
     },
     {
       url: '',
-      logo: '',
+      logo: '/css_logo.png',
       name: 'CSS',
     },
     {
       url: '',
-      logo: '',
+      logo: '/tailwindcss_logo.png',
+      name: 'Tailwind CSS',
+    },
+    {
+      url: '',
+      logo: '/javascript_logo.png',
       name: 'JavaScript',
     },
     {
       url: '',
-      logo: '',
+      logo: '/react_logo.png',
       name: 'React',
     },
     {
       url: '',
-      logo: '',
+      logo: '/next.svg',
       name: 'Next.js',
     },
     {
       url: '',
-      logo: '',
+      logo: '/nodejs_logo.png',
       name: 'Node.js',
     },
   ];
 
   return (
-    <div className="mt-32">
+    <div className="mt-16 bg-white dark:bg-gray-700 shadow-lg p-4 lg:p-8 rounded-xl flex-grow border border-emerald-600">
       <div className="mb-16">
         <h2 className="font-semibold text-4xl mb-4">Skills</h2>
       </div>
@@ -53,7 +58,7 @@ const Skills = () => {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="flex items-start lg:gap-x-6 gap-x-4 max-w-2xl relative before:absolute before:bottom-0 before:top-[4.5rem] before:left-7 before:w-[1px] before:h-[calc(100%-50px)] before:bg-zinc-800"
+            className="flex items-start lg:gap-x-6 gap-x-4 max-w-2xl relative"
           >
             <a
               href={skill.url}

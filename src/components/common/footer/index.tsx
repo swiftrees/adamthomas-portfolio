@@ -12,15 +12,15 @@ const ECOLOGI_LINK = 'https://ecologi.com/swiftrees';
 const Footer = () => {
   const iconVariants = {
     hover: {
-      scale: 1.1, 
-      color: '#4CAF50', 
+      scale: 1.1,
+      color: '#0a66c2',
     },
   };
   return (
-    <footer className="fixed left-0 bottom-0 w-full bg-gray-900 text-white p-4 backdrop-filter backdrop-blur-lg bg-opacity-30">
+    <footer className="fixed left-0 bottom-0 w-full bg-gray-200 dark:bg-gray-800 p-4 backdrop-filter backdrop-blur-lg border-t border-zinc dark:border-gray-900 !bg-opacity-30 shadow-2xl dark:shadow-none">
       <div className="max-w-6xl flex justify-between mx-auto gap-y-2 lg:gap-y-0">
         <div className="flex flex-col">
-          <div className="flex flex-col lg:flex-row gap-x-2">
+          <div className="flex flex-col lg:flex-row gap-x-2 ">
             <p className="text-xs lg:text-sm">
               Built using{' '}
               <Link
@@ -47,7 +47,7 @@ const Footer = () => {
                 Framer Motion.
               </Link>
             </p>
-            <p className="text-xs lg:text-sm">
+            <p className="text-xs lg:text-sm ">
               Deployed with Git, Hosted with{' '}
               <Link
                 href="https://vercel.com/"
@@ -59,7 +59,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="text-xs lg:text-sm">
+          <div className="text-xs lg:text-sm ">
             <FooterCopyright />
           </div>
         </div>
@@ -70,7 +70,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
             aria-label="HEYi Instagram"
-            whileHover="hover" 
+            whileHover="hover"
             variants={iconVariants}
             className="hover:underline"
           >

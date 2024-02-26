@@ -14,18 +14,30 @@ const DarkMode = () => {
   }, []);
 
   if (!mounted) {
-    return null;
+    return (
+      <button aria-label={'Light mode'} onClick={() => setTheme('light')}>
+        <SunHigh className="opacity-0" size={24} />
+      </button>
+    );
   }
 
   if (theme === 'dark')
     return (
-      <button aria-label={'Light mode'} onClick={() => setTheme('light')}>
+      <button
+        aria-label={'Light mode'}
+        className="animate-fade-in"
+        onClick={() => setTheme('light')}
+      >
         <SunHigh color="#FACC15" size={24} />
       </button>
     );
 
   return (
-    <button aria-label={'Dark mode'} onClick={() => setTheme('dark')}>
+    <button
+      aria-label={'Dark mode'}
+      className="animate-fade-in"
+      onClick={() => setTheme('dark')}
+    >
       <MoonFilled size={24} />
     </button>
   );

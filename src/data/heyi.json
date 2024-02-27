@@ -1,0 +1,40 @@
+{
+  "id": "heyi",
+  "title": "HEYi",
+  "url": "https://heyi.app/",
+  "videoUrl": "https://www.veed.io/embed/a83ec70f-c02e-4247-b1d0-580a5c56f972",
+  "image": "/projects/HEYi.jpg",
+  "description": "Create custom products using AI. Built using Next JS, Tailwind CSS, Medusa JS, OpenAI, Replicate.",
+  "features": [
+    {
+      "text": "Some text",
+      "imageUrl": "/projects/heyi-features/intuitive-design.webp",
+      "imageAlt": "image 1"
+    },
+    {
+      "text": "Some text",
+      "imageUrl": "/projects/heyi-features/canvas.webp",
+      "imageAlt": "image 1"
+    },
+    {
+      "text": "Some text",
+      "imageUrl": "/projects/heyi-features/heyi-walkthrough.webp",
+      "imageAlt": "image 1"
+    },
+    {
+      "text": "Some text",
+      "imageUrl": "/projects/heyi-features/marketplace.webp",
+      "imageAlt": "image 1"
+    },
+    {
+      "text": "Some text",
+      "imageUrl": "/projects/heyi-features/media-library.webp",
+      "imageAlt": "image 1"
+    },
+    {
+      "text": "Some text",
+      "imageUrl": "/projects/heyi-features/showcase-gallery.webp",
+      "imageAlt": "image 1"
+    }
+  ]
+}

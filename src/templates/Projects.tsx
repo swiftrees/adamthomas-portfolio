@@ -1,14 +1,16 @@
 'use client';
 import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const ProjectsTemplate = () => {
   const projects = [
     {
       title: 'HEYi',
+      id: 'heyi',
       description: 'Create custom products using AI',
       tools: 'Built using Next JS, Tailwind CSS, Medusa JS, OpenAI, Replicate',
-      imageUrl: './projects/HEYi.jpg',
+      imageUrl: '/projects/HEYi.jpg',
       url: 'https://heyi.app',
     },
     {
@@ -16,41 +18,41 @@ const ProjectsTemplate = () => {
       description:
         'Transform your vision into gallery quality printable artwork',
       tools: 'Built using Next JS, Tailwind CSS, Medusa JS, OpenAI, Replicate',
-      imageUrl: './projects/canvartai.jpg',
+      imageUrl: '/projects/canvartai.jpg',
       url: 'https://canvart.ai',
     },
     {
       title: 'AI Background Removal Tool',
       description: 'Remove the background from any image',
       tools: 'Built using Next JS, Tailwind CSS, and Replicate',
-      imageUrl: './projects/background-removal-tool.jpg',
+      imageUrl: '/projects/background-removal-tool.jpg',
       url: 'https://heyi.app/tools/ai-background-removal',
     },
     {
       title: 'AI Image Upscale Tool',
       description: 'Upscale images to improve quality',
       tools: 'Built using Next JS, Tailwind CSS, and Replicate',
-      imageUrl: './projects/image-upscaler.jpg',
+      imageUrl: '/projects/image-upscaler.jpg',
       url: 'https://heyi.app/tools/ai-image-upscaler',
     },
     {
       title: 'AI Image Restoration Tool',
       description: 'Restore old images and add colour',
       tools: 'Built using Next JS, Tailwind CSS, and Replicate',
-      imageUrl: './projects/image-restoration-tool.jpg',
+      imageUrl: '/projects/image-restoration-tool.jpg',
       url: 'https://heyi.app/tools/ai-image-restorer',
     },
     {
       title: 'The Product Poster - Work in progress',
       description: 'Post products from WooCommerce to Instagram',
       tools: 'Built using React, MUI, OpenAI, WooCommerce & Instagram APIs',
-      imageUrl: './projects/the-product-poster.jpg',
+      imageUrl: '/projects/the-product-poster.jpg',
     },
     {
       title: 'Tree of Gifts',
       description: 'Online Home & Gift Store UK',
       tools: 'Built using WordPress & WooCommerce',
-      imageUrl: './projects/tree-of-gifts-uk.jpg',
+      imageUrl: '/projects/tree-of-gifts-uk.jpg',
       url: 'https://treeofgifts.co.uk',
     },
   ];
@@ -61,8 +63,12 @@ const ProjectsTemplate = () => {
   };
   return (
     <div className="items-center">
-      <h1 className="text-3xl lg:text-6xl font-bold mb-2 text-center">Projects</h1>
-      <p className="text-xl lg:text-3xl text-gray-600 text-center dark:text-gray-400">A showcase of my latest work</p>
+      <h1 className="text-3xl lg:text-6xl font-bold mb-2 text-center">
+        Projects
+      </h1>
+      <p className="text-xl lg:text-3xl text-gray-600 text-center dark:text-gray-400">
+        A showcase of my latest work
+      </p>
 
       <AnimatePresence>
         <motion.div
@@ -81,8 +87,9 @@ const ProjectsTemplate = () => {
           {projects.map((project, index) => (
             <Link
               key={index}
-              href={project.url || ''}
-              target={project.url ? '_blank' : ''}
+              href={project.id ? `/projects/${project.id}` : project.url || ''}
+              target={!project.id ? '_blank' : ''}
+              
               className="flex"
             >
               <motion.div
@@ -91,11 +98,13 @@ const ProjectsTemplate = () => {
                 transition={{ type: 'spring', stiffness: 200, damping: 10 }}
                 className="bg-white shadow-lg p-4 lg:p-8 rounded-xl cursor-pointer border border-emerald-600 dark:bg-gray-700 flex-grow"
               >
-                <img
-                  className="mb-4"
-                  src={project.imageUrl}
-                  alt={`Project ${project.title}`}
-                />
+                <div className="relative w-full aspect-video mb-4">
+                  <Image
+                    src={project.imageUrl}
+                    alt={`Project ${project.title}`}
+                    fill
+                  />
+                </div>
                 <h2 className="text-lg font-bold mb-2 text-gray-900 dark:text-gray-100">
                   {project.title}
                 </h2>

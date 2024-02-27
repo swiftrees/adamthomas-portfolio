@@ -29,6 +29,7 @@ export default function Education() {
             <a
               href={data.url}
               rel="noreferrer noopener"
+              target="_blank"
               className="min-h-[60px] min-w-[60px] rounded-md overflow-clip relative"
             >
               <Image

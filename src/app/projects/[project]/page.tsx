@@ -1,6 +1,7 @@
 import ProjectTemplate from '@/templates/Project';
-import { promises as fs } from 'fs';
 import { Metadata } from 'next';
+
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || '';
 
 type Props = {
   params: {
@@ -9,7 +10,6 @@ type Props = {
 };
 
 async function loadProjectData(id: string) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL; // Ensure you have this environment variable set up
   const response = await fetch(`${baseUrl}/projects/data/${id}.json`);
   if (!response.ok) {
     throw new Error(
@@ -25,21 +25,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const id = params.project;
   const project = await loadProjectData(id);
   return {
-    title: `${project.title} | Project by Adam Thomas`,
+    metadataBase: new URL(baseUrl),
+    title: `${project.title} | Project | Adam Thomas`,
     description: project.tagline,
     openGraph: {
       images: project.image || '',
       title: project.title,
-      description: project.tagline,
+      description: project.shortDescription,
     },
   };
 }
 
 export default async function ProjectPage({ params }: Props) {
-  console.log({ params });
   const id = params.project;
   const project = await loadProjectData(id);
-  console.log({ project });
   return (
     <div className="flex flex-col items-center p-4 lg:p-24 justify-center mx-auto">
       <ProjectTemplate project={project} />

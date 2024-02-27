@@ -16,7 +16,6 @@ const Button = ({
   variant = 'primary',
   ...props
 }: ButtonProps) => {
-  console.log('hello');
   return (
     <button
       {...props}

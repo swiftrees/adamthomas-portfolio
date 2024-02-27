@@ -1,5 +1,5 @@
 'use client';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -16,30 +16,27 @@ type Project = {
   id: string;
   title: string;
   url: string;
-  videoUrl: string;
+  video: string;
   image: string;
+  shortDescription: string;
   description: string;
   features: Feature[];
 };
 
 const ProjectTemplate = ({ project }: { project: Project }) => {
-  // State for modal visibility and image source
   const [isModalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
 
-  // Handler to open modal with selected image
   const openModal = (imageUrl: string) => {
     setSelectedImage(imageUrl);
     setModalOpen(true);
   };
 
-  // Handler to close modal
   const closeModal = () => {
     setModalOpen(false);
   };
   return (
     <div className="w-full xl:w-2/3 mx-auto">
-      {/* Modal for enlarged image */}
       {isModalOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-2 lg:p-24"
@@ -62,19 +59,19 @@ const ProjectTemplate = ({ project }: { project: Project }) => {
         </div>
       )}
 
-      <Link href="/projects" className="flex my-2">
-        <BackArrow className="mr-2"/>
+      <Link href="/projects" className="flex my-6">
+        <BackArrow className="mr-2" />
         Back
       </Link>
-      <div className="flex w-full items-start justify-between mb-4">
-        <h1 className="font-bold lg:text-5xl text-3xl lg:leading-tight mb-4">
+      <div className="flex w-full items-start justify-between mb-6">
+        <h1 className="font-bold lg:text-5xl text-3xl lg:leading-tight">
           {project.title}
         </h1>
 
         <a
           href={project.url}
           rel="noreferrer noopener"
-          className="inline-flex items-center bg-[#1d1d20] text-white hover:border-zinc-700 border border-transparent rounded-md px-4 py-2"
+          className="inline-flex items-center bg-gray-200 text-black dark:bg-gray-800 dark:text-white hover:border-zinc-700 border border-transparent rounded-md px-4 py-2"
         >
           View
           <span className="ml-2">
@@ -83,17 +80,18 @@ const ProjectTemplate = ({ project }: { project: Project }) => {
         </a>
       </div>
 
-      {project.videoUrl && (
+      {project.video && (
         <iframe
           title="Placeholder Video"
-          src={project.videoUrl}
+          src={project.video}
           className="w-full lg:w-2/3 aspect-video mx-auto"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
       )}
-      <div className="flex flex-col gap-y-12 mt-12 leading-7 text-zinc-400">
-        <div>
+      <div className="flex flex-col gap-y-12 mt-12 leading-7 text-zinc-400 font-mono">
+        <div className="flex flex-col gap-y-4">            
+          <p>{project.shortDescription}</p>
           <p>{project.description}</p>
         </div>
         {project.features.map((feature, index) => (

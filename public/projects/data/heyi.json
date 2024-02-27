@@ -2,39 +2,40 @@
   "id": "heyi",
   "title": "HEYi",
   "url": "https://heyi.app/",
-  "videoUrl": "https://www.veed.io/embed/a83ec70f-c02e-4247-b1d0-580a5c56f972",
+  "video": "https://www.veed.io/embed/a83ec70f-c02e-4247-b1d0-580a5c56f972",
   "image": "/projects/HEYi.jpg",
-  "description": "Create custom products using AI. Built using Next JS, Tailwind CSS, Medusa JS, OpenAI, Replicate.",
+  "shortDescription": "Create custom products using AI. Built using Next JS, Tailwind CSS, Medusa JS, OpenAI, Replicate. Store powered by Medusa.js, payments and subscriptions handled with Stripe.",
+  "description": "HEYi innovates custom product design by integrating artificial intelligence into the creative process, making it possible for users to design their own unique products like phone cases, tattoos, and t-shirts. The image creation process has been heavily developed to ensure stability even with high traffic use, implementing a queue system using BullMQ.",
   "features": [
     {
-      "text": "Some text",
+      "text": "One of my main focuses with HEYi was to make it as easy as possible for anyone to use, even with no technical knowledge. I've carefully designed the interface to ensure that simplicity meets functionality. Key information such as remaining tokens, the selected prompt and styles, generated design, and product details are all readily accessible.",
       "imageUrl": "/projects/heyi-features/intuitive-design.webp",
-      "imageAlt": "image 1"
+      "imageAlt": "HEYi Intuitive Design"
     },
     {
-      "text": "Some text",
+      "text": "The canvas is where the magic happens. Built upon a HTML canvas, this component is one of the most developed and complex pieces of HEYi. The user is able to draw / erase from their design, reposition/resize it, remove the background, and view their print template and mockup.",
       "imageUrl": "/projects/heyi-features/canvas.webp",
-      "imageAlt": "image 1"
+      "imageAlt": "HEYi Canvas"
     },
     {
-      "text": "Some text",
-      "imageUrl": "/projects/heyi-features/heyi-walkthrough.webp",
-      "imageAlt": "image 1"
-    },
-    {
-      "text": "Some text",
-      "imageUrl": "/projects/heyi-features/marketplace.webp",
-      "imageAlt": "image 1"
-    },
-    {
-      "text": "Some text",
+      "text": "The media libary allows users to view all of their created designs and instantly load them into the canvas.",
       "imageUrl": "/projects/heyi-features/media-library.webp",
-      "imageAlt": "image 1"
+      "imageAlt": "HEYi Media Library"
     },
     {
-      "text": "Some text",
+      "text": "To ensure heyi is easy to use for anyone, I've developed a guided tour based on the React Joyride package to explain how to use various features.",
+      "imageUrl": "/projects/heyi-features/heyi-walkthrough.webp",
+      "imageAlt": "HEYi Walkthrough"
+    },
+    {
+      "text": "The user marketplace was one of the biggest challenges faced with the development of HEYi. The marketplace allows subscribed users to create and sell their designs incredibly easily.",
+      "imageUrl": "/projects/heyi-features/marketplace.webp",
+      "imageAlt": "HEYi Marketplace"
+    },
+    {
+      "text": "The showcase encourages the community to share their designs with others. Each showcase design can be expanded to show the prompt and settings used, allowing users to take inspiration from others.",
       "imageUrl": "/projects/heyi-features/showcase-gallery.webp",
-      "imageAlt": "image 1"
+      "imageAlt": "HEYi Showcase"
     }
   ]
 }

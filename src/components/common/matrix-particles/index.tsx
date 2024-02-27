@@ -90,14 +90,12 @@ export default function MatrixParticles({
   };
 
   const resizeCanvas = () => {
-    console.log('resizing canvas');
     if (canvasContainerRef.current && canvasRef.current && context.current) {
       particles.current.length = 0;
 
       const width = window.innerWidth;
 
       const height = document.body.scrollHeight;
-      console.log({ height });
       canvasSize.current.w = width;
       canvasSize.current.h = height;
 

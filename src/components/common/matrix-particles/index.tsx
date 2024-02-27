@@ -35,10 +35,17 @@ export default function MatrixParticles({
     }
     initCanvas();
     animate();
-    window.addEventListener('resize', initCanvas);
+
+    const shouldAddResizeListener = () => window.innerWidth > 1024;
+
+    if (shouldAddResizeListener()) {
+      window.addEventListener('resize', initCanvas);
+    }
 
     return () => {
-      window.removeEventListener('resize', initCanvas);
+      if (shouldAddResizeListener()) {
+        window.removeEventListener('resize', initCanvas);
+      }
     };
   }, []);
 

@@ -76,11 +76,11 @@ export default function WorkExperience() {
         <span>
           Building on the experience gained from HEYi, Canvart is my first joint
           venture, designed to bring unique, gallery-quality pieces into any
-          space. Following the creative direction of my partner's UI/UX designs,
+          space. Following the creative direction of my partner&apos;s UI/UX designs,
           Canvart is developed with an updated tech stack, utilising the latest
           features of <span className="text-emerald-500">Next.js 14</span>, and
           the newest release of{' '}
-          <span className="text-emerald-500">Medusa.js</span> for the store's
+          <span className="text-emerald-500">Medusa.js</span> for the store&apos;s
           backend. Learning and adapting to these latest versions has been one
           of the biggest challenges so far as well as implementing multilingual
           support. Frontend hosted on{' '}

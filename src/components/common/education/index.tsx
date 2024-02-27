@@ -4,7 +4,7 @@ export default function Education() {
   const jobs = [
     {
       name: 'University of South Wales',
-      logo: '/usw_logo.jpg',
+      logo: '/logos/usw-logo.png',
       url: 'https://www.southwales.ac.uk/',
       title: 'BSc (Hons) Computer Science 2:1',
       startDate: '2013',
@@ -15,7 +15,7 @@ export default function Education() {
   ];
 
   return (
-    <section className="mt-16 flex-grow bg-white dark:bg-gray-700 border border-emerald-600 shadow-lg p-4 lg:p-8 pb-12 rounded-xl">
+    <section className="mt-16 bg-white dark:bg-gray-700 border border-emerald-600 shadow-lg p-4 lg:p-8 pb-12 rounded-xl">
       <div className="mb-16">
         <h2 className="font-semibold text-4xl mb-4">Education</h2>
       </div>
@@ -24,7 +24,7 @@ export default function Education() {
         {jobs.map((data, index) => (
           <div
             key={index}
-            className="flex items-start lg:gap-x-6 gap-x-4 max-w-2xl relative before:absolute before:bottom-0 before:top-[4.5rem] before:left-7 before:w-[1px] before:h-[calc(100%-50px)] before:bg-emerald-800"
+            className="flex items-start lg:gap-x-6 gap-x-4 max-w-2xl relative"
           >
             <a
               href={data.url}
@@ -44,7 +44,6 @@ export default function Education() {
               <small className="text-sm text-zinc-500 mt-2 tracking-widest uppercase">
                 {data.startDate.toString()} - {data.endDate.toString()}
               </small>
-              <p className="text-base text-zinc-400 my-4">{data.description}</p>
             </div>
           </div>
         ))}

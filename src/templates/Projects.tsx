@@ -16,7 +16,7 @@ const ProjectsTemplate = () => {
       description:
         'Transform your vision into gallery quality printable artwork',
       tools: 'Built using Next JS, Tailwind CSS, Medusa JS, OpenAI, Replicate',
-      imageUrl: './projects/canvart.JPG',
+      imageUrl: './projects/canvart.jpg',
       url: 'https://canvart.ai',
     },
     {
@@ -43,7 +43,7 @@ const ProjectsTemplate = () => {
     {
       title: 'The Product Poster - Work in progress',
       description: 'Post products from WooCommerce to Instagram',
-      tools: 'Built using React, MUI, OpenAI, Replicate',
+      tools: 'Built using React, MUI, OpenAI, WooCommerce & Instagram APIs',
       imageUrl: './projects/the-product-poster.jpg',
     },
     {
@@ -74,19 +74,20 @@ const ProjectsTemplate = () => {
               },
             },
           }}
-          className="grid grid-cols-1 lg:grid-cols-2 lg:grid-cols-3 gap-8 mt-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8"
         >
           {projects.map((project, index) => (
             <Link
               key={index}
               href={project.url || ''}
               target={project.url ? '_blank' : ''}
+              className="flex"
             >
               <motion.div
                 variants={cardVariants}
                 whileHover={{ scale: 1.025 }}
                 transition={{ type: 'spring', stiffness: 200, damping: 10 }}
-                className="bg-white shadow-lg p-4 lg:p-8 rounded-xl cursor-pointer border border-emerald-600 dark:bg-gray-700"
+                className="bg-white shadow-lg p-4 lg:p-8 rounded-xl cursor-pointer border border-emerald-600 dark:bg-gray-700 flex-grow"
               >
                 <img
                   className="mb-4"

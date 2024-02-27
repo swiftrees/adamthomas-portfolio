@@ -2,6 +2,7 @@
 
 import { useMousePosition } from '@/utils/useMousePosition';
 import { useRef, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 interface MatrixParticlesProps {
   className?: string;
@@ -18,6 +19,7 @@ export default function MatrixParticles({
   ease = 50,
   refresh = false,
 }: MatrixParticlesProps) {
+  const pathname = usePathname();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const context = useRef<CanvasRenderingContext2D | null>(null);
@@ -46,7 +48,7 @@ export default function MatrixParticles({
 
   useEffect(() => {
     initCanvas();
-  }, [refresh]);
+  }, [refresh, pathname]);
 
   const initCanvas = () => {
     resizeCanvas();
@@ -81,19 +83,16 @@ export default function MatrixParticles({
   };
 
   const resizeCanvas = () => {
+    console.log('resizing canvas');
     if (canvasContainerRef.current && canvasRef.current && context.current) {
       particles.current.length = 0;
 
       const width = window.innerWidth;
 
-      const height = Math.max(
-        document.body.scrollHeight,
-        document.documentElement.scrollHeight,
-        window.innerHeight,
-      );
-
-      canvasSize.current.w = width; 
-      canvasSize.current.h = height; 
+      const height = document.body.scrollHeight;
+      console.log({ height });
+      canvasSize.current.w = width;
+      canvasSize.current.h = height;
 
       canvasRef.current.width = canvasSize.current.w * dpr;
       canvasRef.current.height = canvasSize.current.h * dpr;
@@ -105,14 +104,14 @@ export default function MatrixParticles({
 
   const particleParams = (): Particle => {
     const x = Math.floor(Math.random() * canvasSize.current.w);
-    const y = Math.floor(Math.random() * canvasSize.current.h); 
+    const y = Math.floor(Math.random() * canvasSize.current.h);
     const translateX = 0;
     const translateY = 0;
     const char = String.fromCharCode(Math.random() * 128);
     const alpha = 0;
     const targetAlpha = parseFloat((Math.random() * 0.6 + 0.1).toFixed(1));
     const dx = (Math.random() - 0.5) * 0.2;
-    const dy = Math.random() * 0.5; 
+    const dy = Math.random() * 0.5;
     const magnetism = 0.1 + Math.random() * 4;
     return {
       x,
@@ -132,7 +131,7 @@ export default function MatrixParticles({
     if (context.current) {
       const { x, y, translateX, translateY, char, alpha } = particle;
       context.current.translate(translateX, translateY);
-      context.current.fillStyle = `rgba(0, 255, 0, ${alpha})`; 
+      context.current.fillStyle = `rgba(0, 255, 0, ${alpha})`;
       context.current.font = '15pt monospace';
       context.current.fillText(char, x, y);
       context.current.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -179,10 +178,10 @@ export default function MatrixParticles({
     clearContext();
     particles.current.forEach((particle: Particle, i: number) => {
       const edge = [
-        particle.x + particle.translateX, 
-        canvasSize.current.w - particle.x - particle.translateX, 
-        particle.y + particle.translateY, 
-        canvasSize.current.h - particle.y - particle.translateY, 
+        particle.x + particle.translateX,
+        canvasSize.current.w - particle.x - particle.translateX,
+        particle.y + particle.translateY,
+        canvasSize.current.h - particle.y - particle.translateY,
       ];
       const closestEdge = edge.reduce((a, b) => Math.min(a, b));
       const remapClosestEdge = parseFloat(

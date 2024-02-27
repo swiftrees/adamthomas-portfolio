@@ -89,7 +89,7 @@ const ProjectTemplate = ({ project }: { project: Project }) => {
           allowFullScreen
         ></iframe>
       )}
-      <div className="flex flex-col gap-y-12 mt-12 leading-7 text-zinc-400 font-mono">
+      <div className="flex flex-col gap-y-12 mt-12 leading-7 text-zinc-800 dark:text-zinc-400 font-mono">
         <div className="flex flex-col gap-y-4">            
           <p>{project.shortDescription}</p>
           <p>{project.description}</p>

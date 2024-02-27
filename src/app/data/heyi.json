@@ -5,8 +5,13 @@
   "video": "https://www.veed.io/embed/a83ec70f-c02e-4247-b1d0-580a5c56f972",
   "image": "/projects/HEYi.jpg",
   "shortDescription": "Create custom products using AI. Built using Next JS, Tailwind CSS, Medusa JS, OpenAI, Replicate. Store powered by Medusa.js, payments and subscriptions handled with Stripe.",
-  "description": "HEYi innovates custom product design by integrating artificial intelligence into the creative process, making it possible for users to design their own unique products like phone cases, tattoos, and t-shirts. The image creation process has been heavily developed to ensure stability even with high traffic use, implementing a queue system using BullMQ.",
+  "description": "HEYi innovates custom product design by integrating artificial intelligence into the creative process, making it possible for users to design their own unique products like phone cases, wall art, and t-shirts. My next stages of development include re-designing the creation page to be even easier to use, by automatically fitting the design to the print template and removing the editing features unless required by the user. ",
   "features": [
+    {
+      "text": "The image creation process has been heavily developed to ensure stability even with high traffic use, implementing a queue system using BullMQ. The image generation is powered by multiple Generative AI Models including Stable Diffusion (SDXL) and DALL-E 2&3, as well as models that I have trained myself to create print ready designs for T-shirts, Stickers and Tattoos.",
+      "imageUrl": "/projects/heyi-features/heyi-image-generation.webp",
+      "imageAlt": "HEYi Image Generation"
+    },
     {
       "text": "One of my main focuses with HEYi was to make it as easy as possible for anyone to use, even with no technical knowledge. I've carefully designed the interface to ensure that simplicity meets functionality. Key information such as remaining tokens, the selected prompt and styles, generated design, and product details are all readily accessible.",
       "imageUrl": "/projects/heyi-features/intuitive-design.webp",
@@ -18,22 +23,22 @@
       "imageAlt": "HEYi Canvas"
     },
     {
-      "text": "The media libary allows users to view all of their created designs and instantly load them into the canvas.",
+      "text": "The media libary allows users to view all of their created designs and instantly load them into the canvas. This feature was added based on user feedback to ensure that designs can never be accidentally lost. The next update for the media library will include the ability to search and organise designs.",
       "imageUrl": "/projects/heyi-features/media-library.webp",
       "imageAlt": "HEYi Media Library"
     },
     {
-      "text": "To ensure heyi is easy to use for anyone, I've developed a guided tour based on the React Joyride package to explain how to use various features.",
+      "text": "To ensure heyi is easy to use for anyone, I've developed a helpful guide based on the React Joyride package to explain how to use various features. Moving ahead, I'd like to develop this further by turning it into an interactive walkthrough that the user can follow along with.",
       "imageUrl": "/projects/heyi-features/heyi-walkthrough.webp",
       "imageAlt": "HEYi Walkthrough"
     },
     {
-      "text": "The user marketplace was one of the biggest challenges faced with the development of HEYi. The marketplace allows subscribed users to create and sell their designs incredibly easily.",
+      "text": "The user marketplace was one of the biggest challenges faced with the development of HEYi as it involved a lot of database modifications to entities including Products and Users, as well as creating custom entities for a User's Store. The marketplace allows subscribed users to create and sell their designs incredibly easily.",
       "imageUrl": "/projects/heyi-features/marketplace.webp",
       "imageAlt": "HEYi Marketplace"
     },
     {
-      "text": "The showcase encourages the community to share their designs with others. Each showcase design can be expanded to show the prompt and settings used, allowing users to take inspiration from others.",
+      "text": "The showcase encourages the community to share their designs with others. Each showcase design can be expanded to show the prompt and settings used, allowing users to find inspiration from others.",
       "imageUrl": "/projects/heyi-features/showcase-gallery.webp",
       "imageAlt": "HEYi Showcase"
     }

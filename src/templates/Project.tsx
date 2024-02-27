@@ -51,7 +51,7 @@ const ProjectTemplate = ({ project }: { project: Project }) => {
             <Image src={selectedImage} alt="" fill />
             <button
               onClick={closeModal}
-              className="absolute top-0 right-5 m-2 text-black"
+              className="hidden lg:block font-semibold text-lg absolute top-0 right-5 m-2 text-black"
             >
               Close
             </button>
@@ -98,7 +98,7 @@ const ProjectTemplate = ({ project }: { project: Project }) => {
           <div key={index} className="flex w-full">
             <div
               key={index}
-              className={`w-full flex flex-col lg:flex-row items-center gap-x-6 ${index % 2 === 0 ? '' : 'lg:flex-row-reverse'}`}
+              className={`w-full flex flex-col lg:flex-row items-center gap-x-6 gap-y-6 ${index % 2 === 0 ? '' : 'lg:flex-row-reverse'}`}
             >
               <div className="flex w-full lg:w-2/5 relative aspect-video cursor-pointer">
                 <Image

@@ -17,7 +17,7 @@ const LogoIcon: React.FC<IconProps> = ({
       pathLength: 1,
       transition: {
         delay: 2,
-        duration: 2, // Duration of the animation
+        duration: 2, 
         ease: "easeInOut",
       },
     },

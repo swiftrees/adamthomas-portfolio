@@ -10,13 +10,11 @@ const Footer = () => {
   const iconVariants = {
     hover: {
       scale: 1.1,
-      color: '#0a66c2',
     },
   };
   const gitIconVariants = {
     hover: {
       scale: 1.1,
-      color: '#000',
     },
   };
   return (
@@ -75,7 +73,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between text-gray-800 dark:text-white">
+        <div className="flex flex-col md:flex-row justify-between">
           <motion.a
             href={'https://www.linkedin.com/in/adam-thomas-3518852b2/'}
             target="_blank"
@@ -85,7 +83,7 @@ const Footer = () => {
             variants={iconVariants}
             className="hover:underline"
           >
-            <LinkedIn className="w-8 h-8 lg:w-12 h-12" />
+            <LinkedIn className="w-8 h-8  text-[#0a66c2] hover:opacity-80" />
           </motion.a>
           <motion.a
             href={'https://github.com/swiftrees/adamthomas-portfolio'}
@@ -94,9 +92,9 @@ const Footer = () => {
             aria-label="Adam R Thomas Portfolio Git"
             whileHover="hover"
             variants={gitIconVariants}
-            className="hover:underline"
+            className="hover:underline text-gray-800 dark:text-gray-200 hover:text-black"
           >
-            <GitHub className="w-8 h-8 lg:w-12 h-12" />
+            <GitHub className="w-8 h-8  " />
           </motion.a>
         </div>
       </div>

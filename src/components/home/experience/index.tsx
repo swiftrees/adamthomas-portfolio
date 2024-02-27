@@ -81,7 +81,7 @@ export default function WorkExperience() {
           features of <span className="text-emerald-500">Next.js 14</span>, and
           the newest release of{' '}
           <span className="text-emerald-500">Medusa.js</span> for the store&apos;s
-          backend. Learning and adapting to these latest versions has been one
+          backend. Learning, and adapting to, these latest versions has been one
           of the biggest challenges so far as well as implementing multilingual
           support. Frontend hosted on{' '}
           <span className="text-emerald-500">Vercel</span> and the backend on{' '}

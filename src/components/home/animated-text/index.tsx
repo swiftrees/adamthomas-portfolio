@@ -40,7 +40,7 @@ const AnimatedTextCharacter = ({ text }: { text: string }) => {
   return (
     <motion.div
       style={{ display: "flex" }}
-      className="text-emerald-500 text-2xl sm:text-3xl dark:text-emerald-200 lg:text-4xl font-semibold animate-pulse"
+      className="text-emerald-500 text-2xl sm:text-3xl dark:text-emerald-200 lg:text-4xl font-semibold lg:animate-pulse"
       variants={container}
       initial="hidden"
       animate="visible"

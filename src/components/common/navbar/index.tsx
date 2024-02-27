@@ -23,7 +23,7 @@ const NavLink = ({ href, children }: { href: string; children: ReactNode }) => {
 
 const Nav = () => {
   return (
-    <header className="p-6 bg-gray-200 dark:bg-gray-800 text-black dark:text-white py-4 relative z-50 sticky !bg-opacity-30 backdrop-filter backdrop-blur-lg top-0 border-b border-zinc dark:border-gray-900 shadow-sm dark:shadow-none animate-fade-in">
+    <header className="p-6 bg-gray-200 dark:bg-gray-800 text-black dark:text-white py-4 z-50 sticky !bg-opacity-30 backdrop-filter backdrop-blur-lg top-0 border-b border-zinc dark:border-gray-900 shadow-sm dark:shadow-none animate-fade-in">
       <nav className="max-w-6xl mx-auto flex justify-between">
         <Link href="/">
           <Logo />

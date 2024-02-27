@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default async function Projects() {
   return (
-    <main className="flex min-h-screen flex-col items-center p-8 lg:p-24">
+    <main className="flex min-h-screen flex-col items-center p-4 lg:p-24">
       <ProjectsTemplate />
     </main>
   );

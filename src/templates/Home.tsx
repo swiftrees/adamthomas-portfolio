@@ -1,12 +1,12 @@
 'use client';
 import { motion } from 'framer-motion';
-import AnimatedLogo from '@/components/common/animated-logo';
-import AnimatedTextCharacter from '@/components/common/animated-text';
-import Intro from '@/components/common/intro';
-import WorkExperience from '@/components/common/experience';
-import Skills from '@/components/common/skills';
+import AnimatedLogo from '@/components/home/animated-logo';
+import AnimatedTextCharacter from '@/components/home/animated-text';
+import Intro from '@/components/home/intro';
+import WorkExperience from '@/components/home/experience';
+import Skills from '@/components/home/skills';
 import { useState, useEffect } from 'react';
-import Education from '@/components/common/education';
+import Education from '@/components/home/education';
 
 const HomeTemplate = () => {
   const [isLoading, setIsLoading] = useState(true);

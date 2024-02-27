@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default async function Contact() {
   return (
-    <main className="flex flex-col items-center p-8 lg:p-24 justify-center mx-auto">
+    <main className="flex flex-col items-center p-4 lg:p-24 justify-center mx-auto">
       <ContactTemplate />
     </main>
   );

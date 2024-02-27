@@ -16,7 +16,7 @@ const ProjectsTemplate = () => {
       description:
         'Transform your vision into gallery quality printable artwork',
       tools: 'Built using Next JS, Tailwind CSS, Medusa JS, OpenAI, Replicate',
-      imageUrl: './projects/canvart.jpg',
+      imageUrl: './projects/canvartai.jpg',
       url: 'https://canvart.ai',
     },
     {
@@ -61,7 +61,9 @@ const ProjectsTemplate = () => {
   };
   return (
     <div className="items-center">
-      <h1 className="text-2xl font-bold text-center">Projects</h1>
+      <h1 className="text-3xl lg:text-6xl font-bold mb-2 text-center">Projects</h1>
+      <p className="text-xl lg:text-3xl text-gray-600 text-center dark:text-gray-400">A showcase of my latest work</p>
+
       <AnimatePresence>
         <motion.div
           initial="hidden"

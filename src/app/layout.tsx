@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-gray-100 dark:bg-gray-900`}>
         <Providers>
           <MatrixParticles
-            className="touch-none pointer-events-none lg:pointer-events-auto block absolute inset-0 -z-10 opacity-50"
+            className="touch-none pointer-events-none lg:pointer-events-auto block absolute inset-0 -z-10 opacity-30 lg:opacity-40 dark:opacity-30"
             quantity={200}
           />
           <div className="flex flex-col min-h-screen">

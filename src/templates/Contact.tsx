@@ -5,10 +5,12 @@ import LinkedIn from '@/icons/linkedin';
 import Email from '@/icons/email';
 import Button from '@/components/common/button';
 
+const LINKEDIN_PROFILE = process.env.LINKEDIN_PROFILE || '';
+
 const socials = [
   {
     icon: <LinkedIn />,
-    href: 'https://instagram.com/swiftrees_',
+    href: LINKEDIN_PROFILE,
     label: 'LinkedIn',
     handle: 'Adam Thomas',
   },
@@ -108,12 +110,12 @@ const ContactTemplate = () => {
   return (
     <div className="flex min-h-screen flex-col items-center md:p-4 w-full">
       <h1 className="text-3xl lg:text-6xl font-bold mb-2">Contact</h1>
-      <p className="text-xl lg:text-3xl text-gray-600 dark:text-gray-400">Need to get in touch?</p>
+      <p className="text-xl lg:text-3xl text-gray-600 dark:text-gray-400">
+        Need to get in touch?
+      </p>
 
-      <div className="flex flex-col lg:flex-row gap-x-8 justify-around w-full gap-y-8 mt-8">
+      <div className="flex flex-col lg:flex-row gap-x-8 justify-center w-full gap-y-8 mt-8 max-w-3xl">
         <ContactCard />
-
-        <ContactForm />
       </div>
     </div>
   );

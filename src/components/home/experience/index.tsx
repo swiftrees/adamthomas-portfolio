@@ -4,12 +4,27 @@ import Link from 'next/link';
 export default function WorkExperience() {
   const jobs = [
     {
+      name: 'Huntleigh Healthcare',
+      logo: '/logos/images.jpeg',
+      url: 'https://www.huntleigh-diagnostics.com/',
+      title: 'Software Engineer',
+      startDate: 'April 2024',
+      endDate: 'Present',
+      description: (
+        <div className="flex flex-col gap-y-2">
+          <p>
+            Development of Fetal Heart Rate Monitors.
+            </p>
+        </div>
+      ),
+    },
+    {
       name: 'Cegedim Healthcare Solutions',
       logo: '/logos/cegedim-logo.png',
       url: 'https://www.cegedim-healthcare.co.uk/',
       title: 'Software Developer',
       startDate: 'June 2017',
-      endDate: 'Present',
+      endDate: 'March 2024',
       description: (
         <div className="flex flex-col gap-y-2">
           <p>

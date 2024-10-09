@@ -13,8 +13,9 @@ export default function WorkExperience() {
       description: (
         <div className="flex flex-col gap-y-2">
           <p>
-            Development of Fetal Heart Rate Monitors.
-            </p>
+            Development of Fetal Heart Rate Monitors with <span className="text-emerald-500">C#</span> and{' '}
+            <span className="text-emerald-500">WPF</span>
+          </p>
         </div>
       ),
     },

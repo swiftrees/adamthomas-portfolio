@@ -3,6 +3,11 @@ import Image from 'next/image';
 const Skills = () => {
   const skills = [
     {
+      url: 'https://docs.microsoft.com/en-us/dotnet/',
+      logo: '/logos/dotnet-logo.png',
+      name: '.NET',
+    },
+    {
       url: 'https://docs.microsoft.com/en-us/dotnet/csharp/',
       logo: '/logos/c-logo.png',
       name: 'C#',

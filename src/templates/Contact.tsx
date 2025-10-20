@@ -5,12 +5,10 @@ import LinkedIn from '@/icons/linkedin';
 import Email from '@/icons/email';
 import Button from '@/components/common/button';
 
-const LINKEDIN_PROFILE = process.env.LINKEDIN_PROFILE || '';
-
 const socials = [
   {
     icon: <LinkedIn />,
-    href: LINKEDIN_PROFILE,
+    href: 'https://www.linkedin.com/in/adam-thomas-3518852b2/',
     label: 'LinkedIn',
     handle: 'Adam Thomas',
   },

@@ -6,54 +6,55 @@ import Image from 'next/image';
 const ProjectsTemplate = () => {
   const projects = [
     {
+      title: 'AI Product Photo Generator',
+      description: 'Generate product photos with AI',
+      tools: 'Built using Next JS, Tailwind CSS, Replicate',
+      imageUrl: '/projects/product-photo-generator.jpg',
+      url: 'https://www.aiproductphotos.app/',
+    },
+    {
       title: 'HEYi',
       id: 'heyi',
       description: 'Create custom products using AI',
       tools: 'Built using Next JS, Tailwind CSS, Medusa JS, OpenAI, Replicate',
       imageUrl: '/projects/HEYi.jpg',
-      url: 'https://heyi.app',
     },
     {
-      title: 'Canvart - Work in progress',
+      title: 'Canvart',
       description:
         'Transform your vision into gallery quality printable artwork',
       tools: 'Built using Next JS, Tailwind CSS, Medusa JS, OpenAI, Replicate',
       imageUrl: '/projects/canvartai.jpg',
-      url: 'https://canvart.ai',
+    },    
+    {
+      title: 'Tree of Gifts',
+      description: 'Online Home & Gift Store UK',
+      tools: 'Built using WordPress & WooCommerce',
+      imageUrl: '/projects/tree-of-gifts-uk.jpg',
     },
     {
       title: 'AI Background Removal Tool',
       description: 'Remove the background from any image',
       tools: 'Built using Next JS, Tailwind CSS, and Replicate',
       imageUrl: '/projects/background-removal-tool.jpg',
-      url: 'https://heyi.app/tools/ai-background-removal',
     },
     {
       title: 'AI Image Upscale Tool',
       description: 'Upscale images to improve quality',
       tools: 'Built using Next JS, Tailwind CSS, and Replicate',
       imageUrl: '/projects/image-upscaler.jpg',
-      url: 'https://heyi.app/tools/ai-image-upscaler',
     },
     {
       title: 'AI Image Restoration Tool',
       description: 'Restore old images and add colour',
       tools: 'Built using Next JS, Tailwind CSS, and Replicate',
       imageUrl: '/projects/image-restoration-tool.jpg',
-      url: 'https://heyi.app/tools/ai-image-restorer',
     },
     {
-      title: 'The Product Poster - Work in progress',
+      title: 'The Product Poster',
       description: 'Post products from WooCommerce to Instagram',
       tools: 'Built using React, MUI, OpenAI, WooCommerce & Instagram APIs',
       imageUrl: '/projects/the-product-poster.jpg',
-    },
-    {
-      title: 'Tree of Gifts',
-      description: 'Online Home & Gift Store UK',
-      tools: 'Built using WordPress & WooCommerce',
-      imageUrl: '/projects/tree-of-gifts-uk.jpg',
-      url: 'https://treeofgifts.co.uk',
     },
   ];
 

@@ -6,9 +6,6 @@ import LinkedIn from '@/icons/linkedin';
 import { FooterCopyright } from '../footer-copyright';
 import GitHub from '@/icons/github';
 
-const LINKEDIN_PROFILE = process.env.LINKEDIN_PROFILE || ""
-const PORTFOLIO_GIT = process.env.PORTFOLIO_GIT || ""
-
 const Footer = () => {
   const iconVariants = {
     hover: {
@@ -78,7 +75,7 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between">
           <motion.a
-            href={LINKEDIN_PROFILE}
+            href="https://www.linkedin.com/in/adam-thomas-3518852b2/"
             target="_blank"
             rel="noreferrer"
             aria-label="Adam Thomas LinkedIn Profile"
@@ -89,7 +86,7 @@ const Footer = () => {
             <LinkedIn className="w-8 h-8  text-[#0a66c2] hover:opacity-80" />
           </motion.a>
           <motion.a
-            href={PORTFOLIO_GIT}
+            href="https://github.com/swiftrees/adamthomas-portfolio"
             target="_blank"
             rel="noreferrer"
             aria-label="Adam R Thomas Portfolio Git"

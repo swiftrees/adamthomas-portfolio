@@ -14,7 +14,14 @@ export default function WorkExperience() {
         <div className="flex flex-col gap-y-2">
           <p>
             Development of Fetal Heart Rate Monitors with <span className="text-emerald-500">C#</span> and{' '}
-            <span className="text-emerald-500">WPF</span>
+            <span className="text-emerald-500">WPF</span> and <span className="text-emerald-500">SQL</span>.
+          </p>
+          <p>
+            Proposed and developed a web-based proof of concept for remote CTG viewing using <span className="text-emerald-500">.NET 8</span>, 
+            <span className="text-emerald-500">ASP .NET CORE</span>, <span className="text-emerald-500">SignalR</span> and <span className="text-emerald-500">React</span>.
+          </p>
+          <p>
+            Completed formal training in Software Development for Medical Devices (IEC 62034), and Risk Management (ISO 14971).
           </p>
         </div>
       ),

@@ -70,14 +70,11 @@ const HomeTemplate = () => {
         <div className="flex flex-col lg:flex-row justify-between gap-x-16">
           <div className="flex flex-col w-full lg:w-1/3">
             <Education />
-            <div className="hidden md:flex flex-grow">
+            <div className="flex flex-grow">
               <Skills />
             </div>
           </div>
           <WorkExperience />
-          <div className="block md:hidden">
-            <Skills />
-          </div>
         </div>
       </div>
     </div>
